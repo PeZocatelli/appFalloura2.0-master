@@ -32,7 +32,8 @@ export default function App() {
           <Stack.Screen name="Historico" component={Historico} />
           <Stack.Screen name="DadosQueda" component={DadosQueda} />
           <Stack.Screen name="LocalAtual" component={LocalAtual} />
-          <Stack.Screen name="TabNavigator" component={TabNavigator} />
+         <Stack.Screen name="HomeTabs" component={TabNavigator} />
+
         </Stack.Navigator>
       </NavigationContainer>
     </View>

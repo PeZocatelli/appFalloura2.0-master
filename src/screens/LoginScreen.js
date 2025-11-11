@@ -31,11 +31,12 @@ export default function LoginScreen({ navigation }) {
           <TextInput style={styles.input} value={email} onChangeText={setEmail} keyboardType="email-address" />
           <Text style={styles.label}>Senha:</Text>
           <TextInput style={styles.input} value={senha} onChangeText={setSenha} secureTextEntry />
-<TouchableOpacity onPress={() => navigation.replace('HomeScreen')}>
+<TouchableOpacity onPress={() => navigation.replace('HomeTabs')}>
   <LinearGradient colors={['#00CFFF', '#4361EE']} style={styles.btn}>
     <Text style={styles.btnText}>ENTRAR</Text>
   </LinearGradient>
 </TouchableOpacity>
+
 
         </View>
       </View>
