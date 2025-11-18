@@ -7,6 +7,8 @@ import MonitoramentoScreen from '../screens/Monitoramento';
 import HistoricoScreen from '../screens/Historico';
 import DadosQuedaScreen from '../screens/DadosQueda';
 import LocalRealScreen from '../screens/LocalReal';
+import CadastroScreen from '../screens/CadastroScreen';
+import LoginScreen from '../screens/LoginScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +23,9 @@ export default function HomeStack() {
       <Stack.Screen name="Historico" component={HistoricoScreen} />
       <Stack.Screen name="DadosQueda" component={DadosQuedaScreen} />
       <Stack.Screen name="LocalReal" component={LocalRealScreen} />
+      <Stack.Screen name="CadastroScreen" component={CadastroScreen} />
+             <Stack.Screen name="LoginScreen" component={LoginScreen} />
+
     </Stack.Navigator>
   );
 }

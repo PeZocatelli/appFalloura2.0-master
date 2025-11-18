@@ -2,7 +2,10 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+// Screens
 import LoginScreen from './src/screens/LoginScreen';
+import CadastroScreen from './src/screens/CadastroScreen';
 import TabNavigator from './src/navigation/TabNavigator';
 import DadosAtuais from './src/screens/dadosAtuais.js'; 
 import DadosFixos from './src/screens/DadosFixos.js'; 
@@ -13,8 +16,6 @@ import DadosQueda from './src/screens/DadosQueda.js';
 import LocalAtual from './src/screens/LocalReal.js';
 import HomeScreen from './src/screens/HomeScreen';
 
-
-
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -22,9 +23,16 @@ export default function App() {
     <View style={styles.container}>
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
+          {/* Tela de login */}
           <Stack.Screen name="Login" component={LoginScreen} />
-      <Stack.Screen name="HomeScreen" component={HomeScreen} />
 
+          {/* Tela de cadastro */}
+          <Stack.Screen name="CadastroScreen" component={CadastroScreen} />
+
+          {/* Após login, direciona para as tabs */}
+          <Stack.Screen name="HomeTabs" component={TabNavigator} />
+
+          {/* Outras telas que podem ser acessadas fora das tabs */}
           <Stack.Screen name="DadosAtuais" component={DadosAtuais} /> 
           <Stack.Screen name="DadosFixos" component={DadosFixos} />
           <Stack.Screen name="Emergencia" component={Emergencia} />
@@ -32,8 +40,7 @@ export default function App() {
           <Stack.Screen name="Historico" component={Historico} />
           <Stack.Screen name="DadosQueda" component={DadosQueda} />
           <Stack.Screen name="LocalAtual" component={LocalAtual} />
-         <Stack.Screen name="HomeTabs" component={TabNavigator} />
-
+          <Stack.Screen name="HomeScreen" component={HomeScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </View>
